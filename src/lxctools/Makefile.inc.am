@@ -1,0 +1,40 @@
+LXCTOOLS_DRIVER_SOURCES =                   \
+        lxctools/lxctools_driver.h          \
+        lxctools/lxctools_driver.c          \
+        lxctools/lxctools_conf.c            \
+        lxctools/lxctools_conf.h            \
+        lxctools/lxctools_driver.c          \
+        lxctools/lxctools_driver.h          \
+        lxctools/lxctools_util.c            \
+        lxctools/lxctools_util.h            \
+        lxctools/lxctools_conffile.c        \
+        lxctools/lxctools_conffile.h        \
+        lxctools/lxctools_filecpy_client.c  \
+        lxctools/lxctools_filecpy_client.h  \
+        lxctools/lxctools_filecpy_server.c  \
+        lxctools/lxctools_filecpy_server.h  \
+        lxctools/lxctools_migration.c       \
+        lxctools/lxctools_migration.h       \
+        lxctools/lxctools_filecpy_types.h   \
+        $(NULL)
+
+DRIVER_SOURCE_FILES += $(LXCTOOLS_DRIVER_SOURCES)
+
+EXTRA_DIST += $(LXCTOOLS_DRIVER_SOURCES)
+
+if WITH_LXCTOOLS
+noinst_LTLIBRARIES += libvirt_driver_lxctools.la
+libvirt_la_BUILT_LIBADD += libvirt_driver_lxctools.la
+libvirt_driver_lxctools_la_CFLAGS = \
+		-I$(srcdir)/conf \
+        -llxc \
+        $(AM_CFLAGS) \
+        $(NULL)
+libvirt_driver_lxctools_la_SOURCES = $(LXCTOOLS_DRIVER_SOURCES)
+endif WITH_LXCTOOLS
+
+#if WITH_LXCTOOLS
+#USED_SYM_FILES += $(srcdir)/libvirt_lxctools.syms
+#else ! WITH_LXCTOOLS
+#SYM_FILES += $(srcdir)/libvirt_lxctools.syms
+#endif ! WITH_LXCTOOLS
