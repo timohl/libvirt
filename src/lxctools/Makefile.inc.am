@@ -1,21 +1,17 @@
-LXCTOOLS_DRIVER_SOURCES =                   \
-        lxctools/lxctools_driver.h          \
-        lxctools/lxctools_driver.c          \
-        lxctools/lxctools_conf.c            \
-        lxctools/lxctools_conf.h            \
-        lxctools/lxctools_driver.c          \
-        lxctools/lxctools_driver.h          \
-        lxctools/lxctools_util.c            \
-        lxctools/lxctools_util.h            \
-        lxctools/lxctools_conffile.c        \
-        lxctools/lxctools_conffile.h        \
-        lxctools/lxctools_filecpy_client.c  \
-        lxctools/lxctools_filecpy_client.h  \
-        lxctools/lxctools_filecpy_server.c  \
-        lxctools/lxctools_filecpy_server.h  \
-        lxctools/lxctools_migration.c       \
-        lxctools/lxctools_migration.h       \
-        lxctools/lxctools_filecpy_types.h   \
+LXCTOOLS_DRIVER_SOURCES =					\
+		lxctools/lxctools_conf.c			\
+		lxctools/lxctools_conf.h			\
+		lxctools/lxctools_driver.c			\
+		lxctools/lxctools_driver.h			\
+		lxctools/lxctools_conffile.c		\
+		lxctools/lxctools_conffile.h		\
+		lxctools/lxctools_filecpy_client.c	\
+		lxctools/lxctools_filecpy_client.h	\
+		lxctools/lxctools_filecpy_server.c  \
+		lxctools/lxctools_filecpy_server.h	\
+		lxctools/lxctools_migration.c		\
+		lxctools/lxctools_migration.h		\
+		lxctools/lxctools_filecpy_types.h   \
         $(NULL)
 
 DRIVER_SOURCE_FILES += $(LXCTOOLS_DRIVER_SOURCES)
