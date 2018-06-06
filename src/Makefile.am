@@ -115,6 +115,7 @@ include vmx/Makefile.inc.am
 include vmware/Makefile.inc.am
 include vbox/Makefile.inc.am
 include openvz/Makefile.inc.am
+include lxctools/Makefile.inc.am
 include qemu/Makefile.inc.am
 include bhyve/Makefile.inc.am
 include xenconfig/Makefile.inc.am

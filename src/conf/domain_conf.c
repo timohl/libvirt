@@ -14817,6 +14817,7 @@ virDomainVideoDefaultType(const virDomainDef *def)
     case VIR_DOMAIN_VIRT_LXC:
     case VIR_DOMAIN_VIRT_UML:
     case VIR_DOMAIN_VIRT_OPENVZ:
+    case VIR_DOMAIN_VIRT_LXCTOOLS:
     case VIR_DOMAIN_VIRT_HYPERV:
     case VIR_DOMAIN_VIRT_PHYP:
     case VIR_DOMAIN_VIRT_NONE:

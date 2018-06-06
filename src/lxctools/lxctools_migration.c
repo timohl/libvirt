@@ -48,6 +48,10 @@
 #include "lxctools_filecpy_server.h"
 #include "lxctools_filecpy_client.h"
 
+#ifdef LXCTOOLS_EVALUATION
+struct timeval post_criudump, post_residualcopy, post_predump;
+#endif
+
 #define VIR_FROM_THIS VIR_FROM_LXCTOOLS
 
 VIR_LOG_INIT("lxctools.lxctools_migration");
